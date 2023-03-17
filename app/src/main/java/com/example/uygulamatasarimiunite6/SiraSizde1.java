@@ -3,6 +3,7 @@ package com.example.uygulamatasarimiunite6;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,7 +16,7 @@ public class SiraSizde1 extends AppCompatActivity {
     TextView dogumt, isim, hakkinda;
     Button ileri,geri;
     ImageView imgresim;
-    int sayac = 0;
+    int sayac = -1;
     public void tanimlamalar() {
         dogumt = findViewById(R.id.ss247YasamT);
         isim = findViewById(R.id.ss247AdSoyad);
@@ -57,12 +58,12 @@ public class SiraSizde1 extends AppCompatActivity {
         ileri.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(sayac < 10 && sayac >= 0) {
+                if(sayac < 9 && sayac >= -1) {
+                    sayac++;
                     imgresim.setImageResource(sinif.get(sayac).resim);
                     dogumt.setText("Yaşam Tarihi: " + sinif.get(sayac).dogumtarihi);
                     isim.setText("İsim Soyisim: " + sinif.get(sayac).isimsoyisim);
                     hakkinda.setText("Hakkında: " + sinif.get(sayac).hakkinda);
-                    sayac++;
                 }
                 else {
                     Toast.makeText(SiraSizde1.this, "Sona geldin.", Toast.LENGTH_SHORT).show();
