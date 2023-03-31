@@ -35,6 +35,7 @@
         <activity
             android:name=".Uyg5Activity"
             android:exported="false" />
+        <activity android:name=".Uygulama5_sayfa2_Activity"></activity>
         <activity
             android:name=".Uyg4Activity"
             android:exported="false" />
