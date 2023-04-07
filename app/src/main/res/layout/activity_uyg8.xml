@@ -6,4 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".Uyg8Activity">
 
+    <Button
+        android:id="@+id/fragmentBirinci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:onClick="fragment1"
+        android:text="birinciFragment"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentIkinci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/fragmentIkinci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="fragment2Gecis"
+        android:text="IKİNCİFRAGMENT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="409dp"
+        android:layout_height="410dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentBirinci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
